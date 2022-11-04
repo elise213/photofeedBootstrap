@@ -1,35 +1,34 @@
 <!DOCTYPE html>
 <html lang="en">
 
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Bootstrap Photo Feed</title>
-        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
-            integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm"
-            crossorigin="anonymous" />
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
-            integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
-            integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
-            crossorigin="anonymous"></script>
-    </head>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bootstrap Photo Feed</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+        integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous" />
 
-    <body>
-        <div class="container-fluid mt-3 mb-3">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
-            <!-- Navigation Bar -->
-            <nav class="nav">
+</head>
 
-                <!-- logo -->
-                <div class="d-flex justify-content-start">
-                    <a class="nav-link" href="#">
-                        <i class="fab fa-instagram"></i> <span>Instagram</span>
-                    </a>
-                </div>
+<body>
+    <div class="container-fluid mt-3 mb-3">
 
-                <!-- button -- create a new post -->
+        <!-- Navigation Bar -->
+        <nav class="nav navbar">
+
+            <!-- logo -->
+            <div class="d-flex justify-content-start">
+                <a class="nav-link" href="#">
+                    <i class="fab fa-instagram"></i> <span>Instagram</span>
+                </a>
+            </div>
+
+            <!-- button -- create a new post -->
+            <div class="d-flex">
                 <button type="button" class="btn btn-success">Create a new post</button>
 
                 <!-- dropdown -->
@@ -44,88 +43,112 @@
                         <li><a class="dropdown-item" href="#">3</a></li>
                     </ul>
                 </div>
-
-            </nav>
-
-            <!-- grid or list selection -->
-            <div class="text-center p-2">
-                <i class="fas fa-th"></i>
-                <i class="fas fa-square"></i>
             </div>
-            <br>
+        </nav>
 
-            <!-- post, grid -->
-            <div class="photoGrid p-3">
-                <div class="row">
-                    <img src="images/corgi3.jpg" class="col-4 " alt="">
-                    <img src="images/corgi3.jpg" class="col-4 " alt="">
-                    <img src="images/corgi3.jpg" class="col-4 " alt="">
-                </div>
-                <br>
-                <div class="row">
-                    <img src="images/corgi3.jpg" class="col-4" alt="">
-                    <img src="images/corgi3.jpg" class="col-4 " alt="">
-                    <img src="images/corgi3.jpg" class="col-4 " alt="">
-                </div>
-                <br>
-                <div class="row">
-                    <img src="images/corgi3.jpg" class="col-4" alt="">
-                    <img src="images/corgi3.jpg" class="col-4 " alt="">
-                    <img src="images/corgi3.jpg" class="col-4 " alt="">
+        <!-- grid or list selection -->
+
+        <ul class="nav nav-pills mb-3 justify-content-center" id="pills-tab" role="tablist">
+            <li class="nav-item">
+                <a class="nav-link active" id="pills-home-tab" data-toggle="pill" href="#pills-home" role="tab"
+                    aria-controls="pills-home" aria-selected="true">
+                    <i class="fas fa-th"></i>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" id="pills-profile-tab" data-toggle="pill" href="#pills-profile" role="tab"
+                    aria-controls="pills-profile" aria-selected="false">
+                    <i class="fas fa-square"></i>
+                </a>
+            </li>
+        </ul>
+        <div class="tab-content" id="pills-tabContent">
+            <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
+                <!-- post, grid -->
+                <div class="photoGrid p-3">
+                    <div class="row">
+                        <img src="images/corgi3.jpg" class="col-4 " alt="">
+                        <img src="images/corgi3.jpg" class="col-4 " alt="">
+                        <img src="images/corgi3.jpg" class="col-4 " alt="">
+                    </div>
+                    <br>
+                    <div class="row">
+                        <img src="images/corgi3.jpg" class="col-4" alt="">
+                        <img src="images/corgi3.jpg" class="col-4 " alt="">
+                        <img src="images/corgi3.jpg" class="col-4 " alt="">
+                    </div>
+                    <br>
+                    <div class="row">
+                        <img src="images/corgi3.jpg" class="col-4" alt="">
+                        <img src="images/corgi3.jpg" class="col-4 " alt="">
+                        <img src="images/corgi3.jpg" class="col-4 " alt="">
+                    </div>
                 </div>
             </div>
+            <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">
+                <!-- post, list -->
+                <div class="post row bg-secondary p-3">
+                    <!-- post heading -->
+                     <div class="row justify-content-center">
+                        <div class="header col-5 bg-light">
+                            <strong>My dog Spark!</strong>
+                            <span>8/26</span>
+                        </div>
+                    </div>
+                    <!-- post image -->
+                    <div class="row justify-content-center">
+                        <div class="image col-5 bg-light">
+                            <img src="images/corgi3.jpg" class="col-12" alt="">
+                        </div>
+                    </div>
+                    <!-- post footer -->
+                    <div class="row justify-content-center">
+                        <div class="footer col-5 bg-light">
+                            <strong>213 likes</strong>
+                            <p>This is an example of a photo you can post on instagram</p>
+                        </div>
+                    </div>
 
-            <!-- post, list -->
-            <div class="bg-secondary p-3">
-                <!-- post heading -->
-                <div class="row justify-content-center">
-                    <div class="header col-5 bg-light">
-                        <strong>My dog Spark!</strong>
-                        <span>8/26</span>
+                    <br>
+                    <!-- 2nd post, list -->
+
+                    <!-- post heading -->
+                    <div class="row justify-content-center">
+                        <div class="header col-5 bg-light">
+                            <strong>My dog Spark!</strong>
+                            <span>8/26</span>
+                        </div>
                     </div>
-                </div>
-                <!-- post image -->
-                <div class="row justify-content-center">
-                    <div class="image col-5 bg-light">
-                        <img src="images/corgi3.jpg" class="col-12" alt="">
+                    <!-- post image -->
+                    <div class="row justify-content-center">
+                        <div class="image col-5 bg-light">
+                            <img src="images/corgi3.jpg" class="col-12" alt="">
+                        </div>
                     </div>
-                </div>
-                <!-- post footer -->
-                <div class="row justify-content-center">
-                    <div class="footer col-5 bg-light">
-                        <strong>213 likes</strong>
-                        <p>This is an example of a photo you can post on instagram</p>
+                    <!-- post footer -->
+                    <div class="row justify-content-center">
+                        <div class="footer col-5 bg-light">
+                            <strong>213 likes</strong>
+                            <p>This is an example of a photo you can post on instagram</p>
+                        </div>
                     </div>
+
+                    <br>
                 </div>
 
-                <br>
-                <!-- 2nd post, list -->
-
-                <!-- post heading -->
-                <div class="row justify-content-center">
-                    <div class="header col-5 bg-light">
-                        <strong>My dog Spark!</strong>
-                        <span>8/26</span>
-                    </div>
-                </div>
-                <!-- post image -->
-                <div class="row justify-content-center">
-                    <div class="image col-5 bg-light">
-                        <img src="images/corgi3.jpg" class="col-12" alt="">
-                    </div>
-                </div>
-                <!-- post footer -->
-                <div class="row justify-content-center">
-                    <div class="footer col-5 bg-light">
-                        <strong>213 likes</strong>
-                        <p>This is an example of a photo you can post on instagram</p>
-                    </div>
-                </div>
-
-                <br>
             </div>
-
         </div>
-    </body>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+</body>
 
 </html>
