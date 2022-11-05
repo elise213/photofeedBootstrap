@@ -9,40 +9,75 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
         integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous" />
 
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
-        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <!-- CSS only -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+        integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
 
 </head>
 
 <body>
-    <div class="container-fluid mt-3 mb-3">
+    <div class="container-fluid my-3">
 
         <!-- Navigation Bar -->
         <nav class="nav navbar">
 
-            <!-- logo -->
+            <!-- left menu logo -->
             <div class="d-flex justify-content-start">
                 <a class="nav-link" href="#">
                     <i class="fab fa-instagram"></i> <span>Instagram</span>
                 </a>
             </div>
 
-            <!-- button -- create a new post -->
+            <!-- right menu -->
             <div class="d-flex">
-                <button type="button" class="btn btn-success">Create a new post</button>
 
                 <!-- dropdown -->
                 <div class="dropdown" role="navigation">
-                    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1"
-                        data-bs-toggle="dropdown" aria-expanded="false">
+                    <button class="btn btn-secondary dropdown-toggle" type="button" data-toggle="dropdown"
+                        aria-expanded="false">
                         <i class="fas fa-cog"></i>
                     </button>
-                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                        <li><a class="dropdown-item" href="#">1</a></li>
-                        <li><a class="dropdown-item" href="#">2</a></li>
-                        <li><a class="dropdown-item" href="#">3</a></li>
-                    </ul>
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item" href="#">Profile</a>
+                        <a class="dropdown-item" href="#">Accessibility</a>
+                        <a class="dropdown-item" href="#">Privacy and data</a>
+                        <a class="dropdown-item" href="#" style="color:red;">Logout</a>
+                    </div>
                 </div>
+
+                <!-- Button trigger modal -->
+                <button type="button" class="btn btn-success mx-2" data-toggle="modal" data-target="#exampleModal">
+                    Create a new post
+                </button>
+
+                <!-- Modal -->
+                <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                    aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="exampleModalLabel">Create new post</h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body row justify-content-center">
+                                <strong>Caption:</strong>
+                                <input type="text" class="col-8 ml-3" placeholder="Add the caption of your post here">
+                            </div>
+                            <div class="icons m-2">
+                                <i class="fas fa-camera fa-lg ml-5"></i>
+                                <i class="fas fa-map-marker-alt fa-lg ml-3"></i>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                <button type="button" class="btn btn-success">Publish</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                
             </div>
         </nav>
 
@@ -52,18 +87,94 @@
             <li class="nav-item">
                 <a class="nav-link active" id="pills-home-tab" data-toggle="pill" href="#pills-home" role="tab"
                     aria-controls="pills-home" aria-selected="true">
-                    <i class="fas fa-th"></i>
+                    <i class="fas fa-square"></i>
                 </a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" id="pills-profile-tab" data-toggle="pill" href="#pills-profile" role="tab"
                     aria-controls="pills-profile" aria-selected="false">
-                    <i class="fas fa-square"></i>
+                    <i class="fas fa-th"></i>
                 </a>
             </li>
         </ul>
         <div class="tab-content" id="pills-tabContent">
             <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
+                
+                <!-- post, list -->
+                <div class="bg-light">
+
+                    <!-- 1st post, list -->
+                    <!-- post headder -->
+                    <div class="row justify-content-center p-2">
+                        <div class="header col-5 bg-light mx-5 pr-5 pl-4 d-flex justify-content-between">
+                            <div class="d-inline-flex">&nbsp My dog Spark!</div>
+                            <div class="d-inline-flex">8/26</div>
+                        </div>
+                    </div>
+                    <!-- post image -->
+                    <div class="row justify-content-center">
+                        <div class="image col-5 bg-light">
+                            <img src="images/corgi3.jpg" class="col-12" alt="">
+                        </div>
+                    </div>
+                    <!-- post footer -->
+                    <div class="row justify-content-center p-2 ml-2">
+                        <div class="footer col-5 bg-light">
+                            <strong>213 likes</strong>
+                            <p>This is an example of a photo you can post on instagram</p>
+                        </div>
+                    </div>
+                    <br>
+
+                    <!-- 2nd post, list -->
+                    <!-- post headder -->
+                    <div class="row justify-content-center p-2">
+                        <div class="header col-5 bg-light mx-5 pr-5 pl-4 d-flex justify-content-between">
+                            <div class="d-inline-flex">&nbsp My dog Spark!</div>
+                            <div class="d-inline-flex">8/26</div>
+                        </div>
+                    </div>
+                    <!-- post image -->
+                    <div class="row justify-content-center">
+                        <div class="image col-5 bg-light">
+                            <img src="images/corgi3.jpg" class="col-12" alt="">
+                        </div>
+                    </div>
+                    <!-- post footer -->
+                    <div class="row justify-content-center p-2 ml-2">
+                        <div class="footer col-5 bg-light">
+                            <strong>213 likes</strong>
+                            <p>This is an example of a photo you can post on instagram</p>
+                        </div>
+                    </div>
+                    <br>
+
+                    <!-- 3rd post, list -->
+                    <!-- post headder -->
+                    <div class="row justify-content-center p-2">
+                        <div class="header col-5 bg-light mx-5 pr-5 pl-4 d-flex justify-content-between">
+                            <div class="d-inline-flex">&nbsp My dog Spark!</div>
+                            <div class="d-inline-flex">8/26</div>
+                        </div>
+                    </div>
+                    <!-- post image -->
+                    <div class="row justify-content-center">
+                        <div class="image col-5 bg-light">
+                            <img src="images/corgi3.jpg" class="col-12" alt="">
+                        </div>
+                    </div>
+                    <!-- post footer -->
+                    <div class="row justify-content-center p-2 ml-2">
+                        <div class="footer col-5 bg-light">
+                            <strong>213 likes</strong>
+                            <p>This is an example of a photo you can post on instagram</p>
+                        </div>
+                    </div>
+                    <br>
+                </div>
+            </div>
+            <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">
+
                 <!-- post, grid -->
                 <div class="photoGrid p-3">
                     <div class="row">
@@ -85,58 +196,6 @@
                     </div>
                 </div>
             </div>
-            <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">
-                <!-- post, list -->
-                <div class="post row bg-secondary p-3">
-                    <!-- post heading -->
-                     <div class="row justify-content-center">
-                        <div class="header col-5 bg-light">
-                            <strong>My dog Spark!</strong>
-                            <span>8/26</span>
-                        </div>
-                    </div>
-                    <!-- post image -->
-                    <div class="row justify-content-center">
-                        <div class="image col-5 bg-light">
-                            <img src="images/corgi3.jpg" class="col-12" alt="">
-                        </div>
-                    </div>
-                    <!-- post footer -->
-                    <div class="row justify-content-center">
-                        <div class="footer col-5 bg-light">
-                            <strong>213 likes</strong>
-                            <p>This is an example of a photo you can post on instagram</p>
-                        </div>
-                    </div>
-
-                    <br>
-                    <!-- 2nd post, list -->
-
-                    <!-- post heading -->
-                    <div class="row justify-content-center">
-                        <div class="header col-5 bg-light">
-                            <strong>My dog Spark!</strong>
-                            <span>8/26</span>
-                        </div>
-                    </div>
-                    <!-- post image -->
-                    <div class="row justify-content-center">
-                        <div class="image col-5 bg-light">
-                            <img src="images/corgi3.jpg" class="col-12" alt="">
-                        </div>
-                    </div>
-                    <!-- post footer -->
-                    <div class="row justify-content-center">
-                        <div class="footer col-5 bg-light">
-                            <strong>213 likes</strong>
-                            <p>This is an example of a photo you can post on instagram</p>
-                        </div>
-                    </div>
-
-                    <br>
-                </div>
-
-            </div>
         </div>
     </div>
 
@@ -146,9 +205,15 @@
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
         integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
         crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
-        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
         crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct"
+        crossorigin="anonymous"></script>
+
 </body>
 
 </html>
